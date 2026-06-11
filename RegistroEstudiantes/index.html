@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Registro de Estudiantes</h1>
+
+        <form id="formulario">
+
+            <div class="grupo">
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" placeholder="Ingrese la cédula">
+            </div>
+
+            <div class="grupo">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" placeholder="Ingrese los apellidos">
+            </div>
+
+            <div class="grupo">
+                <label for="nombres">Nombres</label>
+                <input type="text" id="nombres" placeholder="Ingrese los nombres">
+            </div>
+
+            <div class="grupo">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" placeholder="Ingrese la dirección">
+            </div>
+
+            <div class="grupo">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" placeholder="Ingrese el teléfono">
+            </div>
+
+            <div class="grupo">
+                <label for="correo">Correo Electrónico</label>
+                <input type="text" id="correo" placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="grupo">
+                <label for="facultad">Facultad</label>
+                <input type="text" id="facultad" placeholder="Ingrese la facultad">
+            </div>
+
+            <div class="grupo">
+                <label for="nivel">Nivel</label>
+                <input type="number" id="nivel" min="1" max="10">
+            </div>
+
+            <div class="grupo">
+                <label for="paralelo">Paralelo</label>
+                <input type="text" id="paralelo" placeholder="Ej: A">
+            </div>
+
+            <button type="submit">Guardar Estudiante</button>
+
+        </form>
+
+        <h2>Listado de Estudiantes</h2>
+
+        <div class="tabla-responsive">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Facultad</th>
+                        <th>Nivel</th>
+                        <th>Paralelo</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaEstudiantes">
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
