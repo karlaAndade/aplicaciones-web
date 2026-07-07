@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 4</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contenedor{
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input{
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #resultado{
+            margin-top: 20px;
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h2>Operaciones Matemáticas</h2>
+
+        <input type="number" id="num1" placeholder="Ingrese el primer número">
+
+        <input type="number" id="num2" placeholder="Ingrese el segundo número">
+
+        <br>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+<script>
+
+function calcular(){
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    var resultado = "";
+
+    for(var i = 1; i <= 5; i++){
+
+        if(i == 1){
+
+            resultado += "PRIMERA iteración: SUMA = " + (num1 + num2) + "<br>";
+
+        }
+
+        else if(i == 2){
+
+            resultado += "SEGUNDA iteración: RESTA = " + (num1 - num2) + "<br>";
+
+        }
+
+        else if(i == 3){
+
+            resultado += "TERCERA iteración: MULTIPLICACIÓN = " + (num1 * num2) + "<br>";
+
+        }
+
+        else if(i == 4){
+
+            resultado += "CUARTA iteración: DIVISIÓN = " + (num1 / num2) + "<br>";
+
+        }
+
+        else if(i == 5){
+
+            resultado += "QUINTA iteración: MOD (%) = " + (num1 % num2) + "<br>";
+
+        }
+
+    }
+
+    document.getElementById("resultado").innerHTML = resultado;
+
+}
+
+</script>
+
+</body>
+</html>

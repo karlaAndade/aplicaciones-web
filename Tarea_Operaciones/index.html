@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones Matemáticas</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .contenedor{
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #resultado{
+            margin-top: 20px;
+            background: #eeeeee;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Operaciones Matemáticas</h1>
+
+        <label>Ingrese el primer número</label>
+        <input type="number" id="num1">
+
+        <label>Ingrese el segundo número</label>
+        <input type="number" id="num2">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+
+        function calcular(){
+
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            let salida = "";
+
+            for(let i = 1; i <= 5; i++){
+
+                if(i == 1){
+                    salida += "<p>1. SUMA: " + (num1 + num2) + "</p>";
+                }
+
+                else if(i == 2){
+                    salida += "<p>2. RESTA: " + (num1 - num2) + "</p>";
+                }
+
+                else if(i == 3){
+                    salida += "<p>3. MULTIPLICACIÓN: " + (num1 * num2) + "</p>";
+                }
+
+                else if(i == 4){
+
+                    if(num2 != 0){
+                        salida += "<p>4. DIVISIÓN: " + (num1 / num2) + "</p>";
+                    }else{
+                        salida += "<p>4. DIVISIÓN: No se puede dividir para cero</p>";
+                    }
+
+                }
+
+                else if(i == 5){
+                    salida += "<p>5. MOD (%): " + (num1 % num2) + "</p>";
+                }
+
+            }
+
+            document.getElementById("resultado").innerHTML = salida;
+
+        }
+
+    </script>
+
+</body>
+</html>
