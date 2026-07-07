@@ -1,0 +1,71 @@
+:root {
+  --color-fondo: #f6f4ee;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2430;
+  --color-texto-suave: #5c6270;
+  --color-primario: #1b3a4b;
+  --color-primario-claro: #2e5d73;
+  --color-acento: #e1a83e;
+  --color-acento-suave: #f6e6c2;
+  --color-borde: #e4e0d8;
+  --color-error: #c1442e;
+  --color-error-suave: #fbe6e1;
+  --color-exito: #2f7a4f;
+  --color-exito-suave: #e2f2e7;
+
+  --fuente-titulo: "Space Grotesk", "Segoe UI", sans-serif;
+  --fuente-texto: "Inter", "Segoe UI", sans-serif;
+
+  --radio: 10px;
+  --sombra: 0 1px 3px rgba(31, 36, 48, 0.06), 0 8px 24px rgba(31, 36, 48, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  color: var(--color-primario);
+}
+
+p {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+button {
+  font-family: var(--fuente-texto);
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: var(--fuente-texto);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primario-claro);
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100vh;
+}
